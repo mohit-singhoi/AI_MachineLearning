@@ -1,6 +1,6 @@
-***Creating git repo & Upload Project on Github Flow structure***
+## Creating git repo & Upload Project on Github Flow structure
 
-Steps :-
+#### Steps :-
 1. git init
 2. git branch -m main
 3. git remote add origin <repo link>
@@ -12,11 +12,9 @@ Steps :-
 Successfully git initiated or project uploaded.
 
 
-**Course Structure**
+# Course Structure 
 
-***AI/ML - Artificial Intelligence & Machine Learning***
-
-# AI / ML Roadmap
+# AI / ML Roadmap :- Artificial Intelligence & Machine Learning
 
 > A complete end-to-end learning path covering Python, Data Science, Machine Learning, Deep Learning, Generative AI, and AI Engineering with multiple real-world projects.
 
