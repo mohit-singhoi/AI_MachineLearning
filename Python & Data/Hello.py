@@ -1,0 +1,1 @@
+print("Hello, Welcome to AI & ML Era world!")
