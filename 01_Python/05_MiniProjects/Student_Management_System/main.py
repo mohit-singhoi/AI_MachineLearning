@@ -1,6 +1,8 @@
 from student import Student
 from file_manager import load_students, save_students
-from exceptions import StudentNotFoundError
+
+class StudentNotFoundError(Exception):
+    pass
 
 students = load_students()
 

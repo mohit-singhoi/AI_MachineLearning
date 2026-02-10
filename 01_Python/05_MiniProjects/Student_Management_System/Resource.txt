@@ -1,0 +1,14 @@
+Student Management System
+Language: Python
+Concepts: OOPS, File Handling, JSON, Exception Handling
+
+Features:
+- Add Student
+- View Students
+- Update Marks
+- Auto Grade Calculation
+- Data stored in JSON file
+
+
+
+
