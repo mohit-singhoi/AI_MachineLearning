@@ -6,7 +6,9 @@ from product import Product
 
 
 class InventorySystem:
-    FILE_PATH = os.path.join("Data", "inventory.json")
+
+    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+    FILE_PATH = os.path.join(BASE_DIR, "Data", "inventory.json")
 
     def __init__(self):
         self.products = []
@@ -20,7 +22,9 @@ class InventorySystem:
                     Product(p["product_id"], p["name"], p["quantity"], p["price"])
                     for p in data
                 ]
+            print("✅ Data loaded successfully!")
         except FileNotFoundError:
+            print("❌ inventory.json file not found!")
             self.products = []
 
     def save_inventory(self):

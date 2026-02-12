@@ -1,5 +1,26 @@
 [
-    {"product_id": "P101", "name": "Laptop", "quantity": 10, "price": 55000},
-    {"product_id": "P102", "name": "Mobile", "quantity": 25, "price": 15000},
-    {"product_id": "P103", "name": "Keyboard", "quantity": 40, "price": 1200}
+    {
+        "product_id": "P101",
+        "name": "Laptop",
+        "quantity": 10,
+        "price": 55000
+    },
+    {
+        "product_id": "P102",
+        "name": "Mobile",
+        "quantity": 25,
+        "price": 15000
+    },
+    {
+        "product_id": "P103",
+        "name": "Keyboard",
+        "quantity": 40,
+        "price": 1200
+    },
+    {
+        "product_id": "P1379",
+        "name": "PenDrive",
+        "quantity": 500,
+        "price": 1576.0
+    }
 ]
