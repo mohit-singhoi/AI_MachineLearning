@@ -1,17 +1,87 @@
 [
-    {"product": "Laptop", "quantity": 5, "price": 55000},
-    {"product": "Mobile", "quantity": 10, "price": 15000},
-    {"product": "Headphones", "quantity": 20, "price": 2000},
-    {"product": "Keyboard", "quantity": 15, "price": 1200},
-    {"product": "Mouse", "quantity": 25, "price": 800},
-    {"product": "Monitor", "quantity": 8, "price": 12000},
-    {"product": "Tablet", "quantity": 6, "price": 18000},
-    {"product": "Printer", "quantity": 4, "price": 9000},
-    {"product": "Smartwatch", "quantity": 12, "price": 7000},
-    {"product": "Speaker", "quantity": 14, "price": 3500},
-    {"product": "Camera", "quantity": 3, "price": 45000},
-    {"product": "Power Bank", "quantity": 30, "price": 1500},
-    {"product": "External HDD", "quantity": 7, "price": 6000},
-    {"product": "USB Cable", "quantity": 50, "price": 300},
-    {"product": "Router", "quantity": 9, "price": 2500}
+    {
+        "product": "Laptop",
+        "quantity": 5,
+        "price": 55000
+    },
+    {
+        "product": "Mobile",
+        "quantity": 10,
+        "price": 15000
+    },
+    {
+        "product": "Headphones",
+        "quantity": 20,
+        "price": 2000
+    },
+    {
+        "product": "Keyboard",
+        "quantity": 15,
+        "price": 1200
+    },
+    {
+        "product": "Mouse",
+        "quantity": 25,
+        "price": 800
+    },
+    {
+        "product": "Monitor",
+        "quantity": 8,
+        "price": 12000
+    },
+    {
+        "product": "Tablet",
+        "quantity": 6,
+        "price": 18000
+    },
+    {
+        "product": "Printer",
+        "quantity": 4,
+        "price": 9000
+    },
+    {
+        "product": "Smartwatch",
+        "quantity": 12,
+        "price": 7000
+    },
+    {
+        "product": "Speaker",
+        "quantity": 14,
+        "price": 3500
+    },
+    {
+        "product": "Camera",
+        "quantity": 3,
+        "price": 45000
+    },
+    {
+        "product": "Power Bank",
+        "quantity": 30,
+        "price": 1500
+    },
+    {
+        "product": "External HDD",
+        "quantity": 7,
+        "price": 6000
+    },
+    {
+        "product": "USB Cable",
+        "quantity": 50,
+        "price": 300
+    },
+    {
+        "product": "Router",
+        "quantity": 9,
+        "price": 2500
+    },
+    {
+        "product": "Green CarryBag",
+        "quantity": 10000,
+        "price": 1.5
+    },
+    {
+        "product": "Fresh Lemon Juice",
+        "quantity": 20000,
+        "price": 10.0
+    }
 ]
