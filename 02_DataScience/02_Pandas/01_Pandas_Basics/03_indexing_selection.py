@@ -114,7 +114,7 @@ print("\n")
 
 print("========== ROWS & COLUMNS USING iloc[] ==========\n")
 
-print(df.iloc[0:3, 0:2])
+print(df.iloc[0:4, 0:2])
 
 print("\n")
 
@@ -282,6 +282,7 @@ result = df.loc[df["Salary"] > 55000, ["Name", "Salary"]]
 print(result)
 
 print("\n")
+
 
 
 # =========================================================
