@@ -1,45 +1,67 @@
-# =========================================================
-# Pandas Read CSV & JSON
-# Beginner to Advanced
-# File: 04_read_csv_json.py
-# =========================================================
+# # =========================================================
+# # Pandas Read CSV & JSON
+# # Beginner to Advanced
+# # File: 04_read_csv_json.py
+# # =========================================================
 
-# =========================================================
-# 1. IMPORT PANDAS
-# =========================================================
+# # =========================================================
+# # 1. IMPORT PANDAS and PATH for dynamic Path
+# # =========================================================
 
+from pathlib import Path
 import pandas as pd
 
 
-# =========================================================
-# 2. WHAT IS CSV?
-# =========================================================
+# # =========================================================
+# # 2. WHAT IS CSV?
+# # =========================================================
 
-"""
-CSV = Comma Separated Values
+# """
+# CSV = Comma Separated Values
 
-- Stores tabular data
-- Most common dataset format in Data Science
-- Used in:
-    • Machine Learning
-    • Data Analysis
-    • Business Analytics
-"""
+# - Stores tabular data
+# - Most common dataset format in Data Science
+# - Used in:
+#     • Machine Learning
+#     • Data Analysis
+#     • Business Analytics
+# """
 
-print("========== CSV FILES ==========\n")
+# print("========== CSV FILES ==========\n")
 
 
-# =========================================================
-# 3. READ CSV FILE
-# =========================================================
+# # =========================================================
+# # 3. READ CSV FILE
+# # =========================================================
 
-print("========== READ CSV FILE ==========\n")
 
-# Reading employees dataset
-df = pd.read_csv("../datasets/employees.csv")
+# print("========== READ CSV FILE  AS A BEGINEER LEVEL ==========\n")
+
+# # Reading employees dataset
+# df = pd.read_csv("../datasets/employees.csv")
+
+# print(df)
+
+# print("\n")
+
+
+
+# USED FOR FETCHING DYNAMIC PATH LOOKS LIKE REALWORLD/INDUSTRY REALATED WORK
+
+import pandas as pd
+
+# Current file directory
+BASE_DIR = Path(__file__).resolve().parent
+
+# Dataset path
+csv_path = BASE_DIR.parent / "datasets" / "employees.csv"
+
+print(csv_path)
+
+df = pd.read_csv(csv_path)
+
 
 print(df)
-
 print("\n")
 
 
@@ -65,197 +87,210 @@ print(df.tail())
 print("\n")
 
 
-# # =========================================================
-# # 6. SHAPE OF DATASET
-# # =========================================================
+# =========================================================
+# 6. SHAPE OF DATASET
+# =========================================================
 
-# print("========== SHAPE ==========\n")
+print("========== SHAPE ==========\n")
 
-# print(df.shape)
+print(df.shape)
 
-# print("\n")
-
-
-# # =========================================================
-# # 7. COLUMN NAMES
-# # =========================================================
-
-# print("========== COLUMNS ==========\n")
-
-# print(df.columns)
-
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 8. DATA TYPES
-# # =========================================================
+# =========================================================
+# 7. COLUMN NAMES
+# =========================================================
 
-# print("========== DATA TYPES ==========\n")
+print("========== COLUMNS ==========\n")
 
-# print(df.dtypes)
+print(df.columns)
 
-# print("\n")
-
-
-# # =========================================================
-# # 9. DATASET INFORMATION
-# # =========================================================
-
-# print("========== INFO ==========\n")
-
-# print(df.info())
-
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 10. DESCRIBE DATA
-# # =========================================================
+# =========================================================
+# 8. DATA TYPES
+# =========================================================
 
-# print("========== DESCRIBE ==========\n")
+print("========== DATA TYPES ==========\n")
 
-# print(df.describe())
+print(df.dtypes)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 11. READ SPECIFIC COLUMNS
-# # =========================================================
+# =========================================================
+# 9. DATASET INFORMATION
+# =========================================================
 
-# print("========== SPECIFIC COLUMNS ==========\n")
+print("========== INFO ==========\n")
 
+print(df.info())
+
+print("\n")
+
+
+# =========================================================
+# 10. DESCRIBE DATA
+# =========================================================
+
+print("========== DESCRIBE ==========\n")
+
+print(df.describe())
+
+print("\n")
+
+
+# =========================================================
+# 11. READ SPECIFIC COLUMNS
+# =========================================================
+
+print("========== SPECIFIC COLUMNS ==========\n")
+
+## Begineer level
 # selected_columns = pd.read_csv(
 #     "datasets/employees.csv",
 #     usecols=["Name", "Salary"]
 # )
 
-# print(selected_columns)
+selected_columns = pd.read_csv(
+    csv_path,
+    usecols=["EmployeeName", "Salary"]
+)
 
-# print("\n")
+
+print(selected_columns)
+
+print("\n")
 
 
-# # =========================================================
-# # 12. READ LIMITED ROWS
-# # =========================================================
+# =========================================================
+# 12. READ LIMITED ROWS
+# =========================================================
 
-# print("========== LIMITED ROWS ==========\n")
+print("========== LIMITED ROWS ==========\n")
 
 # limited_rows = pd.read_csv(
 #     "datasets/employees.csv",
 #     nrows=5
 # )
 
-# print(limited_rows)
-
-# print("\n")
-
-
-# # =========================================================
-# # 13. SKIP ROWS
-# # =========================================================
-
-# print("========== SKIP ROWS ==========\n")
-
-# skip_rows = pd.read_csv(
-#     "datasets/employees.csv",
-#     skiprows=2
-# )
-
-# print(skip_rows)
-
-# print("\n")
+limited_rows = pd.read_csv(
+    csv_path,
+    nrows=5
+)
 
 
-# # =========================================================
-# # 14. CUSTOM COLUMN NAMES
-# # =========================================================
+print(limited_rows)
 
-# print("========== CUSTOM COLUMN NAMES ==========\n")
-
-# custom_df = pd.read_csv("datasets/employees.csv")
-
-# custom_df.columns = [
-#     "ID",
-#     "EmployeeName",
-#     "EmployeeAge",
-#     "Department",
-#     "Location",
-#     "Salary",
-#     "Experience"
-# ]
-
-# print(custom_df)
-
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 15. SAVE DATAFRAME AS CSV
-# # =========================================================
+# =========================================================
+# 13. SKIP ROWS
+# =========================================================
 
-# print("========== SAVE CSV ==========\n")
+print("========== SKIP ROWS ==========\n")
 
-# custom_df.to_csv(
-#     "datasets/new_employees.csv",
-#     index=False
-# )
+skip_rows = pd.read_csv(
+    csv_path,
+    skiprows=2
+)
 
-# print("CSV File Saved Successfully")
+print(skip_rows)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 16. FILTER DATA
-# # =========================================================
+# =========================================================
+# 14. CUSTOM COLUMN NAMES
+# =========================================================
+
+print("========== CUSTOM COLUMN NAMES ==========\n")
+
+custom_df = pd.read_csv(csv_path)
+
+custom_df.columns = [
+    "ID",
+    "EmployeeName",
+    "EmployeeAge",
+    "Department",
+    "Location",
+    "Salary",
+    "Experience"
+]
+
+print(custom_df)
+
+print("\n")
+
+
+# =========================================================
+# 15. SAVE DATAFRAME AS CSV
+# =========================================================
+
+print("========== SAVE CSV ==========\n")
+
+custom_df.to_csv(
+    csv_path,
+    index=False
+)
+
+print("CSV File Saved Successfully")
+
+print("\n")
+
+print(df.columns)
+# =========================================================
+# 16. FILTER DATA
+# =========================================================
 
 # print("========== FILTER DATA ==========\n")
 
-# high_salary = df[df["Salary"] > 60000]
+high_salary = df[df["Salary"] > 60000]
 
-# print(high_salary)
+print(high_salary)
 
-# print("\n")
-
-
-# # =========================================================
-# # 17. SORT DATA
-# # =========================================================
-
-# print("========== SORT DATA ==========\n")
-
-# sorted_df = df.sort_values(
-#     by="Salary",
-#     ascending=False
-# )
-
-# print(sorted_df)
-
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 18. CHECK NULL VALUES
-# # =========================================================
+# =========================================================
+# 17. SORT DATA
+# =========================================================
 
-# print("========== NULL VALUES ==========\n")
+print("========== SORT DATA ==========\n")
 
-# print(df.isnull())
+sorted_df = df.sort_values(
+    by="Salary",
+    ascending=False
+)
 
-# print("\n")
+print(sorted_df)
+
+print("\n")
 
 
-# # =========================================================
-# # 19. COUNT NULL VALUES
-# # =========================================================
+# =========================================================
+# 18. CHECK NULL VALUES
+# =========================================================
 
-# print("========== NULL VALUE COUNT ==========\n")
+print("========== NULL VALUES ==========\n")
 
-# print(df.isnull().sum())
+print(df.isnull())
 
-# print("\n")
+print("\n")
+
+
+# =========================================================
+# 19. COUNT NULL VALUES
+# =========================================================
+
+print("========== NULL VALUE COUNT ==========\n")
+
+print(df.isnull().sum())
+
+print("\n")
 
 
 # # =========================================================

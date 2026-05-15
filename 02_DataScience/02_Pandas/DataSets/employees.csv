@@ -1,4 +1,4 @@
-EmployeeID,Name,Age,Department,City,Salary,Experience
+ID,EmployeeName,EmployeeAge,Department,Location,Salary,Experience
 101,Mohit,22,IT,Delhi,50000,1
 102,Aman,24,HR,Noida,45000,2
 103,Neha,23,Finance,Mumbai,60000,3
