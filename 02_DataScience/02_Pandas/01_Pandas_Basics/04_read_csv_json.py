@@ -375,199 +375,307 @@ print(json_df.info())
 print("\n")
 
 
-# # =========================================================
-# # 26. CREATE DATAFRAME FROM DICTIONARY
-# # =========================================================
+# =========================================================
+# 26. CREATE DATAFRAME FROM DICTIONARY
+# =========================================================
 
-# print("========== DATAFRAME FROM DICTIONARY ==========\n")
+print("========== DATAFRAME FROM DICTIONARY ==========\n")
 
-# data = {
-#     "Name": ["Rahul", "Mohit", "Neha"],
-#     "Math": [90, 85, 95],
-#     "Science": [88, 91, 89]
-# }
+data = {
+    "Name": ["Rahul", "Mohit", "Neha"],
+    "Math": [90, 85, 95],
+    "Science": [88, 91, 89]
+}
 
-# students_df = pd.DataFrame(data)
+students_df = pd.DataFrame(data)
 
-# print(students_df)
+print(students_df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 27. SAVE DATAFRAME AS JSON
-# # =========================================================
+# =========================================================
+# 27. SAVE DATAFRAME AS JSON
+# =========================================================
 
-# print("========== SAVE JSON ==========\n")
+output_json_path = BASE_DIR.parent / "datasets" / "students_output.json"
 
+print("========== SAVE JSON ==========\n")
+
+## Begineer Level
 # students_df.to_json(
 #     "datasets/students_output.json"
 # )
 
-# print("JSON File Saved Successfully")
+students_df.to_json(
+    output_json_path,
+    orient="records",
+    indent=4
+)
 
-# print("\n")
+print("JSON File Saved Successfully")
 
-
-# # =========================================================
-# # 28. CSV TO JSON
-# # =========================================================
-
-# print("========== CSV TO JSON ==========\n")
-
-# sales_df = pd.read_csv("datasets/sales_data.csv")
-
-# sales_df.to_json("datasets/sales_data.json")
-
-# print("CSV Converted To JSON")
-
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 29. JSON TO CSV
-# # =========================================================
+# =========================================================
+# 28. CSV TO JSON
+# =========================================================
 
-# print("========== JSON TO CSV ==========\n")
+print("========== CSV TO JSON ==========\n")
 
-# students_json = pd.read_json(
-#     "datasets/students.json"
-# )
+# CSV INPUT PATH
+csv_path1 = BASE_DIR.parent / "datasets" / "sales_data.csv"
 
-# students_json.to_csv(
-#     "datasets/students_output.csv",
-#     index=False
-# )
+# JSON OUTPUT PATH
+json_output_path = BASE_DIR.parent / "datasets" / "sales_data.json"
 
-# print("JSON Converted To CSV")
+# READ CSV
+sales_df = pd.read_csv(csv_path1)
 
-# print("\n")
+# CONVERT CSV TO JSON
+sales_df.to_json(
+    json_output_path,
+    orient="records",
+    indent=4
+)
 
+print("CSV Converted To JSON")
 
-# # =========================================================
-# # 30. READ EXCEL FILE
-# # =========================================================
+print("\n")
 
-# print("========== READ EXCEL ==========\n")
+# =========================================================
+# 29. JSON TO CSV
+# =========================================================
 
-# """
-# Syntax:
+print("========== JSON TO CSV ==========\n")
 
-# pd.read_excel("file.xlsx")
-# """
+# JSON INPUT PATH
+json_input_path = BASE_DIR.parent / "datasets" / "students.json"
 
-# print("Excel Files Can Also Be Read")
+# CSV OUTPUT PATH
+csv_output_path = BASE_DIR.parent / "datasets" / "students_output.csv"
 
-# print("\n")
+# READ JSON FILE
+students_json = pd.read_json(json_input_path)
 
+# CONVERT JSON TO CSV
+students_json.to_csv(
+    csv_output_path,
+    index=False
+)
 
-# # =========================================================
-# # 31. EXPORT TO EXCEL
-# # =========================================================
+print("JSON Converted To CSV")
 
-# print("========== EXPORT TO EXCEL ==========\n")
-
-# df.to_excel(
-#     "datasets/employees.xlsx",
-#     index=False
-# )
-
-# print("Excel File Exported")
-
-# print("\n")
-
-
-# # =========================================================
-# # 32. LARGE DATASET HANDLING
-# # =========================================================
-
-# print("========== LARGE DATASETS ==========\n")
-
-# """
-# Useful Parameters:
-
-# - chunksize
-# - low_memory
-# - nrows
-# - usecols
-# """
-
-# print("Used For Handling Large Datasets")
-
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 33. MINI PRACTICE TASK
-# # =========================================================
+# =========================================================
+# 30. READ EXCEL FILE
+# =========================================================
 
-# print("========== MINI PRACTICE TASK ==========\n")
+print("========== READ EXCEL ==========\n")
 
-# netflix_df = pd.read_csv(
-#     "datasets/netflix_data.csv"
-# )
+"""
+Syntax:
 
-# print(netflix_df.head())
+pd.read_excel("file.xlsx")
+"""
 
-# print("\n")
+# EXCEL FILE PATH
+excel_path = BASE_DIR.parent / "datasets" / "employees.xlsx"
 
-# print("Only Movies:\n")
+# READ EXCEL FILE
+excel_df = pd.read_excel(excel_path)
 
-# movies = netflix_df[
-#     netflix_df["Type"] == "Movie"
-# ]
+print(excel_df)
 
-# print(movies)
-
-# print("\n")
-
-# print("Top Rated Content:\n")
-
-# top_rated = netflix_df.sort_values(
-#     by="Rating",
-#     ascending=False
-# )
-
-# print(top_rated.head())
-
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 34. MINI PROJECT TASK
-# # =========================================================
+# =========================================================
+# 31. EXPORT TO EXCEL
+# =========================================================
 
-# print("========== MINI PROJECT TASK ==========\n")
+print("========== EXPORT TO EXCEL ==========\n")
 
-# sales_df = pd.read_csv(
-#     "datasets/sales_data.csv"
-# )
+# EXCEL OUTPUT PATH
+excel_output_path = BASE_DIR.parent / "datasets" / "employees.xlsx"
 
-# print(sales_df)
+# EXPORT DATAFRAME TO EXCEL
+df.to_excel(
+    excel_output_path,
+    index=False
+)
 
-# print("\n")
+print("Excel File Exported")
 
-# print("Total Sales:\n")
+print("\n")
 
-# sales_df["TotalAmount"] = (
-#     sales_df["Quantity"] *
-#     sales_df["Price"]
-# )
 
-# print(sales_df)
+# =========================================================
+# 32. LARGE DATASET HANDLING
+# =========================================================
 
-# print("\n")
+print("========== LARGE DATASETS ==========\n")
 
-# print("Highest Sales Product:\n")
+"""
+Useful Parameters:
 
-# highest_sales = sales_df.sort_values(
-#     by="TotalAmount",
-#     ascending=False
-# )
+- chunksize
+- low_memory
+- nrows
+- usecols
+"""
 
-# print(highest_sales.head(1))
+# DATASET PATH
+large_csv_path = BASE_DIR.parent / "datasets" / "large_sales_data.csv"
 
-# print("\n")
+# =========================================================
+# 1. READ ONLY FIRST 5 ROWS
+# =========================================================
+
+sample_df = pd.read_csv(
+    large_csv_path,
+    nrows=5
+)
+
+print("FIRST 5 ROWS:\n")
+print(sample_df)
+
+print("\n")
+
+# =========================================================
+# 2. READ SPECIFIC COLUMNS ONLY
+# =========================================================
+
+selected_df = pd.read_csv(
+    large_csv_path,
+    usecols=["Product", "Sales"]
+)
+
+print("SELECTED COLUMNS:\n")
+print(selected_df.head())
+
+print("\n")
+
+# =========================================================
+# 3. HANDLE LARGE FILES USING CHUNKS
+# =========================================================
+
+print("READING IN CHUNKS:\n")
+
+chunk_iterator = pd.read_csv(
+    large_csv_path,
+    chunksize=1000
+)
+
+for chunk in chunk_iterator:
+    print(chunk.head())
+    break
+
+print("\n")
+
+# =========================================================
+# 4. LOW MEMORY MODE
+# =========================================================
+
+low_memory_df = pd.read_csv(
+    large_csv_path,
+    low_memory=False
+)
+
+print("LOW MEMORY MODE ENABLED")
+
+print("\n")
+
+
+# =========================================================
+# 33. MINI PRACTICE TASK
+# =========================================================
+
+# Netflix Dynamic Path 
+netflixpath = BASE_DIR.parent / "datasets" / "netflix_data.csv"
+
+print("========== MINI PRACTICE TASK ==========\n")
+
+netflix_df = pd.read_csv(
+    netflixpath
+)
+
+print(netflix_df.head())
+
+print("\n")
+
+print("Only Movies:\n")
+
+movies = netflix_df[
+    netflix_df["Type"] == "Movie"
+]
+
+print(movies)
+
+print("\n")
+
+print("Top Rated Content:\n")
+
+top_rated = netflix_df.sort_values(
+    by="Rating",
+    ascending=False
+)
+
+print(top_rated.head())
+
+print("\n")
+
+
+# =========================================================
+# 34. MINI PROJECT TASK
+# =========================================================
+
+print("========== MINI PROJECT TASK ==========\n")
+
+# SALES DATASET PATH
+salespath = BASE_DIR.parent / "datasets" / "sales_data.csv"
+
+# READ CSV FILE
+sales_df = pd.read_csv(salespath)
+
+print("ORIGINAL DATA:\n")
+
+print(sales_df.head())
+
+print("\n")
+
+# =========================================================
+# TOTAL SALES CALCULATION
+# =========================================================
+
+print("TOTAL SALES:\n")
+
+sales_df["TotalAmount"] = (
+    sales_df["Quantity"] *
+    sales_df["Price"]
+)
+
+print(sales_df.head())
+
+print("\n")
+
+# =========================================================
+# HIGHEST SALES PRODUCT
+# =========================================================
+
+print("HIGHEST SALES PRODUCT:\n")
+
+highest_sales = sales_df.sort_values(
+    by="TotalAmount",
+    ascending=False
+)
+
+print(highest_sales.head(1))
+
+print("\n")
 
 
 # # =========================================================

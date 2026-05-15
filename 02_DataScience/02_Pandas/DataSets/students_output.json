@@ -1,0 +1,17 @@
+[
+    {
+        "Name":"Rahul",
+        "Math":90,
+        "Science":88
+    },
+    {
+        "Name":"Mohit",
+        "Math":85,
+        "Science":91
+    },
+    {
+        "Name":"Neha",
+        "Math":95,
+        "Science":89
+    }
+]
