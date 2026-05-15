@@ -1,0 +1,11 @@
+OrderID,Customer,Product,Category,Quantity,Price,PaymentMethod,City
+5001,Rahul,Laptop,Electronics,1,65000,Credit Card,Delhi
+5002,Mohit,Phone,Electronics,2,22000,UPI,Noida
+5003,Neha,Shoes,Fashion,3,3500,Debit Card,Mumbai
+5004,Aman,Watch,Accessories,1,5000,Cash,Pune
+5005,Simran,Tablet,Electronics,1,30000,UPI,Lucknow
+5006,Ritika,Bag,Fashion,2,2500,Credit Card,Delhi
+5007,Karan,Headphones,Electronics,1,4000,UPI,Noida
+5008,Priya,Jacket,Fashion,1,4500,Debit Card,Mumbai
+5009,Arjun,Camera,Electronics,1,70000,Credit Card,Bangalore
+5010,Sneha,T-Shirt,Fashion,4,1200,Cash,Pune

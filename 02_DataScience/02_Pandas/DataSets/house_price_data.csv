@@ -1,0 +1,11 @@
+HouseID,Location,Area_sqft,Bedrooms,Bathrooms,Price
+1,Delhi,1200,2,2,5500000
+2,Noida,1500,3,2,7200000
+3,Gurgaon,1800,3,3,9800000
+4,Mumbai,1000,2,2,12000000
+5,Pune,1400,3,2,6800000
+6,Bangalore,2000,4,3,11000000
+7,Hyderabad,1600,3,2,7500000
+8,Chennai,1300,2,2,6000000
+9,Lucknow,1700,3,3,5000000
+10,Jaipur,1450,3,2,4800000

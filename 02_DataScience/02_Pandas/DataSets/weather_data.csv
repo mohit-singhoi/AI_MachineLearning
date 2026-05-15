@@ -1,0 +1,11 @@
+Date,City,Temperature,Humidity,WindSpeed,Rainfall
+2026-01-01,Delhi,18,60,12,0
+2026-01-02,Mumbai,28,75,8,2
+2026-01-03,Pune,24,65,10,1
+2026-01-04,Bangalore,22,70,9,0
+2026-01-05,Noida,17,58,11,0
+2026-01-06,Lucknow,16,62,13,0
+2026-01-07,Chennai,30,80,7,3
+2026-01-08,Hyderabad,26,68,9,1
+2026-01-09,Jaipur,20,55,10,0
+2026-01-10,Kolkata,27,78,8,2

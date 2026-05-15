@@ -1,5 +1,5 @@
 # =========================================================
-# Pandas Read CSV & JSON Tutorial
+# Pandas Read CSV & JSON
 # Beginner to Advanced
 # File: 04_read_csv_json.py
 # =========================================================
@@ -18,18 +18,12 @@ import pandas as pd
 """
 CSV = Comma Separated Values
 
-- Most common file format in Data Science
 - Stores tabular data
+- Most common dataset format in Data Science
 - Used in:
-    - Machine Learning
-    - Data Analysis
-    - Business Analytics
-
-Example:
-
-Name,Age,City
-Mohit,22,Delhi
-Aman,24,Noida
+    • Machine Learning
+    • Data Analysis
+    • Business Analytics
 """
 
 print("========== CSV FILES ==========\n")
@@ -39,35 +33,10 @@ print("========== CSV FILES ==========\n")
 # 3. READ CSV FILE
 # =========================================================
 
-print("========== READ CSV ==========\n")
+print("========== READ CSV FILE ==========\n")
 
-# Sample:
-# df = pd.read_csv("datasets/employees.csv")
-
-# Uncomment when dataset exists
-
-# print(df)
-
-print("Syntax:")
-print('pd.read_csv("file_path.csv")')
-
-print("\n")
-
-
-# =========================================================
-# 4. CREATE SAMPLE DATAFRAME
-# =========================================================
-
-print("========== SAMPLE DATAFRAME ==========\n")
-
-data = {
-    "Name": ["Mohit", "Aman", "Neha", "Rahul"],
-    "Age": [22, 24, 23, 25],
-    "City": ["Delhi", "Noida", "Mumbai", "Pune"],
-    "Salary": [50000, 60000, 55000, 70000]
-}
-
-df = pd.DataFrame(data)
+# Reading employees dataset
+df = pd.read_csv("../datasets/employees.csv")
 
 print(df)
 
@@ -75,21 +44,7 @@ print("\n")
 
 
 # =========================================================
-# 5. SAVE DATAFRAME AS CSV
-# =========================================================
-
-print("========== SAVE CSV ==========\n")
-
-# Save CSV file
-# df.to_csv("employees.csv", index=False)
-
-print("CSV File Saved Successfully")
-
-print("\n")
-
-
-# =========================================================
-# 6. READ ONLY FIRST ROWS
+# 4. FIRST 5 ROWS
 # =========================================================
 
 print("========== HEAD() ==========\n")
@@ -100,7 +55,7 @@ print("\n")
 
 
 # =========================================================
-# 7. READ LAST ROWS
+# 5. LAST 5 ROWS
 # =========================================================
 
 print("========== TAIL() ==========\n")
@@ -110,445 +65,543 @@ print(df.tail())
 print("\n")
 
 
-# =========================================================
-# 8. CHECK DATA TYPES
-# =========================================================
+# # =========================================================
+# # 6. SHAPE OF DATASET
+# # =========================================================
 
-print("========== DATA TYPES ==========\n")
+# print("========== SHAPE ==========\n")
 
-print(df.dtypes)
+# print(df.shape)
 
-print("\n")
-
-
-# =========================================================
-# 9. INFO()
-# =========================================================
-
-print("========== INFO ==========\n")
-
-print(df.info())
-
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 10. SHAPE
-# =========================================================
+# # =========================================================
+# # 7. COLUMN NAMES
+# # =========================================================
 
-print("========== SHAPE ==========\n")
+# print("========== COLUMNS ==========\n")
 
-print(df.shape)
+# print(df.columns)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 11. READ SPECIFIC COLUMNS
-# =========================================================
+# # =========================================================
+# # 8. DATA TYPES
+# # =========================================================
 
-print("========== SPECIFIC COLUMNS ==========\n")
+# print("========== DATA TYPES ==========\n")
 
-# Example syntax
-# df = pd.read_csv(
-#     "employees.csv",
+# print(df.dtypes)
+
+# print("\n")
+
+
+# # =========================================================
+# # 9. DATASET INFORMATION
+# # =========================================================
+
+# print("========== INFO ==========\n")
+
+# print(df.info())
+
+# print("\n")
+
+
+# # =========================================================
+# # 10. DESCRIBE DATA
+# # =========================================================
+
+# print("========== DESCRIBE ==========\n")
+
+# print(df.describe())
+
+# print("\n")
+
+
+# # =========================================================
+# # 11. READ SPECIFIC COLUMNS
+# # =========================================================
+
+# print("========== SPECIFIC COLUMNS ==========\n")
+
+# selected_columns = pd.read_csv(
+#     "datasets/employees.csv",
 #     usecols=["Name", "Salary"]
 # )
 
-print(df[["Name", "Salary"]])
+# print(selected_columns)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 12. SKIP ROWS
-# =========================================================
+# # =========================================================
+# # 12. READ LIMITED ROWS
+# # =========================================================
 
-print("========== SKIP ROWS ==========\n")
+# print("========== LIMITED ROWS ==========\n")
 
-"""
-Syntax:
+# limited_rows = pd.read_csv(
+#     "datasets/employees.csv",
+#     nrows=5
+# )
 
-pd.read_csv(
-    "file.csv",
-    skiprows=2
-)
-"""
+# print(limited_rows)
 
-print("skiprows used to skip rows while reading")
+# print("\n")
 
-print("\n")
 
+# # =========================================================
+# # 13. SKIP ROWS
+# # =========================================================
 
-# =========================================================
-# 13. HANDLE MISSING VALUES
-# =========================================================
+# print("========== SKIP ROWS ==========\n")
 
-print("========== HANDLE MISSING VALUES ==========\n")
+# skip_rows = pd.read_csv(
+#     "datasets/employees.csv",
+#     skiprows=2
+# )
 
-data2 = {
-    "Name": ["Mohit", "Aman", None, "Neha"],
-    "Marks": [90, None, 85, 95]
-}
+# print(skip_rows)
 
-missing_df = pd.DataFrame(data2)
+# print("\n")
 
-print(missing_df)
 
-print("\nNull Values:\n")
+# # =========================================================
+# # 14. CUSTOM COLUMN NAMES
+# # =========================================================
 
-print(missing_df.isnull())
+# print("========== CUSTOM COLUMN NAMES ==========\n")
 
-print("\n")
+# custom_df = pd.read_csv("datasets/employees.csv")
 
+# custom_df.columns = [
+#     "ID",
+#     "EmployeeName",
+#     "EmployeeAge",
+#     "Department",
+#     "Location",
+#     "Salary",
+#     "Experience"
+# ]
 
-# =========================================================
-# 14. FILL MISSING VALUES
-# =========================================================
+# print(custom_df)
 
-print("========== FILL MISSING VALUES ==========\n")
+# print("\n")
 
-filled_df = missing_df.fillna(0)
 
-print(filled_df)
+# # =========================================================
+# # 15. SAVE DATAFRAME AS CSV
+# # =========================================================
 
-print("\n")
+# print("========== SAVE CSV ==========\n")
 
+# custom_df.to_csv(
+#     "datasets/new_employees.csv",
+#     index=False
+# )
 
-# =========================================================
-# 15. DROP NULL VALUES
-# =========================================================
+# print("CSV File Saved Successfully")
 
-print("========== DROP NULL VALUES ==========\n")
+# print("\n")
 
-dropped_df = missing_df.dropna()
 
-print(dropped_df)
+# # =========================================================
+# # 16. FILTER DATA
+# # =========================================================
 
-print("\n")
+# print("========== FILTER DATA ==========\n")
 
+# high_salary = df[df["Salary"] > 60000]
 
-# =========================================================
-# 16. CHANGE COLUMN NAMES
-# =========================================================
+# print(high_salary)
 
-print("========== CHANGE COLUMN NAMES ==========\n")
+# print("\n")
 
-df.columns = ["Employee", "EmployeeAge", "EmployeeCity", "EmployeeSalary"]
 
-print(df)
+# # =========================================================
+# # 17. SORT DATA
+# # =========================================================
 
-print("\n")
+# print("========== SORT DATA ==========\n")
 
+# sorted_df = df.sort_values(
+#     by="Salary",
+#     ascending=False
+# )
 
-# =========================================================
-# 17. READ LARGE DATASETS
-# =========================================================
+# print(sorted_df)
 
-print("========== LARGE DATASETS ==========\n")
+# print("\n")
 
-"""
-Useful parameters:
 
-nrows=
-chunksize=
-low_memory=
-"""
+# # =========================================================
+# # 18. CHECK NULL VALUES
+# # =========================================================
 
-print("Used for handling very large datasets")
+# print("========== NULL VALUES ==========\n")
 
-print("\n")
+# print(df.isnull())
 
+# print("\n")
 
-# =========================================================
-# 18. WHAT IS JSON?
-# =========================================================
 
-"""
-JSON = JavaScript Object Notation
+# # =========================================================
+# # 19. COUNT NULL VALUES
+# # =========================================================
 
-- Common format for APIs
-- Widely used in web applications
-- Stores data in key-value format
-"""
+# print("========== NULL VALUE COUNT ==========\n")
 
-print("========== JSON FILES ==========\n")
+# print(df.isnull().sum())
 
+# print("\n")
 
-# =========================================================
-# 19. READ JSON FILE
-# =========================================================
 
-print("========== READ JSON ==========\n")
+# # =========================================================
+# # 20. REMOVE DUPLICATES
+# # =========================================================
 
-# Example:
-# df = pd.read_json("datasets/data.json")
+# print("========== REMOVE DUPLICATES ==========\n")
 
-print('Syntax: pd.read_json("file.json")')
+# duplicate_removed = df.drop_duplicates()
 
-print("\n")
+# print(duplicate_removed)
 
+# print("\n")
 
-# =========================================================
-# 20. CREATE DATAFRAME FROM DICTIONARY
-# =========================================================
 
-print("========== DATAFRAME FROM DICTIONARY ==========\n")
+# # =========================================================
+# # 21. WHAT IS JSON?
+# # =========================================================
 
-json_data = {
-    "Name": {
-        "0": "Mohit",
-        "1": "Aman",
-        "2": "Neha"
-    },
-    "Marks": {
-        "0": 90,
-        "1": 85,
-        "2": 95
-    },
-    "City": {
-        "0": "Delhi",
-        "1": "Noida",
-        "2": "Mumbai"
-    }
-}
+# """
+# JSON = JavaScript Object Notation
 
-json_df = pd.DataFrame(json_data)
+# - Used in APIs
+# - Stores data in key-value format
+# - Common in web applications
+# """
 
-print(json_df)
+# print("========== JSON FILES ==========\n")
 
-print("\n")
 
+# # =========================================================
+# # 22. READ JSON FILE
+# # =========================================================
 
-# =========================================================
-# 21. SAVE JSON FILE
-# =========================================================
+# print("========== READ JSON ==========\n")
 
-print("========== SAVE JSON ==========\n")
+# json_df = pd.read_json("datasets/employees.json")
 
-# json_df.to_json("students.json")
+# print(json_df)
 
-print("JSON File Saved Successfully")
+# print("\n")
 
-print("\n")
 
+# # =========================================================
+# # 23. JSON HEAD
+# # =========================================================
 
-# =========================================================
-# 22. CONVERT CSV TO JSON
-# =========================================================
+# print("========== JSON HEAD ==========\n")
 
-print("========== CSV TO JSON ==========\n")
+# print(json_df.head())
 
-"""
-Syntax:
+# print("\n")
 
-df.to_json("data.json")
-"""
 
-print("CSV converted to JSON")
+# # =========================================================
+# # 24. JSON SHAPE
+# # =========================================================
 
-print("\n")
+# print("========== JSON SHAPE ==========\n")
 
+# print(json_df.shape)
 
-# =========================================================
-# 23. CONVERT JSON TO CSV
-# =========================================================
+# print("\n")
 
-print("========== JSON TO CSV ==========\n")
 
-"""
-Syntax:
+# # =========================================================
+# # 25. JSON INFO
+# # =========================================================
 
-df.to_csv("data.csv")
-"""
+# print("========== JSON INFO ==========\n")
 
-print("JSON converted to CSV")
+# print(json_df.info())
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 24. READ EXCEL FILE
-# =========================================================
+# # =========================================================
+# # 26. CREATE DATAFRAME FROM DICTIONARY
+# # =========================================================
 
-print("========== READ EXCEL ==========\n")
+# print("========== DATAFRAME FROM DICTIONARY ==========\n")
 
-"""
-Syntax:
+# data = {
+#     "Name": ["Rahul", "Mohit", "Neha"],
+#     "Math": [90, 85, 95],
+#     "Science": [88, 91, 89]
+# }
 
-pd.read_excel("file.xlsx")
-"""
+# students_df = pd.DataFrame(data)
 
-print("Excel file reading supported")
+# print(students_df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 25. EXPORT TO EXCEL
-# =========================================================
+# # =========================================================
+# # 27. SAVE DATAFRAME AS JSON
+# # =========================================================
 
-print("========== EXPORT TO EXCEL ==========\n")
+# print("========== SAVE JSON ==========\n")
 
-"""
-Syntax:
+# students_df.to_json(
+#     "datasets/students_output.json"
+# )
 
-df.to_excel("output.xlsx")
-"""
+# print("JSON File Saved Successfully")
 
-print("Excel file exported")
+# print("\n")
 
-print("\n")
 
+# # =========================================================
+# # 28. CSV TO JSON
+# # =========================================================
 
-# =========================================================
-# 26. READ TEXT FILE
-# =========================================================
+# print("========== CSV TO JSON ==========\n")
 
-print("========== READ TEXT FILE ==========\n")
+# sales_df = pd.read_csv("datasets/sales_data.csv")
 
-"""
-Syntax:
+# sales_df.to_json("datasets/sales_data.json")
 
-pd.read_table("file.txt")
-"""
+# print("CSV Converted To JSON")
 
-print("Text files can also be read")
+# print("\n")
 
-print("\n")
 
+# # =========================================================
+# # 29. JSON TO CSV
+# # =========================================================
 
-# =========================================================
-# 27. CHECK DUPLICATES
-# =========================================================
+# print("========== JSON TO CSV ==========\n")
 
-print("========== DUPLICATES ==========\n")
+# students_json = pd.read_json(
+#     "datasets/students.json"
+# )
 
-duplicate_data = {
-    "Name": ["A", "B", "B", "C"],
-    "Marks": [90, 80, 80, 70]
-}
+# students_json.to_csv(
+#     "datasets/students_output.csv",
+#     index=False
+# )
 
-duplicate_df = pd.DataFrame(duplicate_data)
+# print("JSON Converted To CSV")
 
-print(duplicate_df)
+# print("\n")
 
-print("\nDuplicate Rows:\n")
 
-print(duplicate_df.duplicated())
+# # =========================================================
+# # 30. READ EXCEL FILE
+# # =========================================================
 
-print("\n")
+# print("========== READ EXCEL ==========\n")
 
+# """
+# Syntax:
 
-# =========================================================
-# 28. REMOVE DUPLICATES
-# =========================================================
+# pd.read_excel("file.xlsx")
+# """
 
-print("========== REMOVE DUPLICATES ==========\n")
+# print("Excel Files Can Also Be Read")
 
-clean_df = duplicate_df.drop_duplicates()
+# print("\n")
 
-print(clean_df)
 
-print("\n")
+# # =========================================================
+# # 31. EXPORT TO EXCEL
+# # =========================================================
 
+# print("========== EXPORT TO EXCEL ==========\n")
 
-# =========================================================
-# 29. MINI PRACTICE TASK
-# =========================================================
+# df.to_excel(
+#     "datasets/employees.xlsx",
+#     index=False
+# )
 
-print("========== MINI PRACTICE TASK ==========\n")
+# print("Excel File Exported")
 
-employee_data = {
-    "Name": ["Rahul", "Mohit", "Neha", "Aman"],
-    "Department": ["IT", "HR", "Finance", "IT"],
-    "Salary": [50000, 60000, 70000, 55000]
-}
+# print("\n")
 
-employee_df = pd.DataFrame(employee_data)
 
-print(employee_df)
+# # =========================================================
+# # 32. LARGE DATASET HANDLING
+# # =========================================================
 
-print("\n")
+# print("========== LARGE DATASETS ==========\n")
 
-print("Employees in IT Department:\n")
+# """
+# Useful Parameters:
 
-it_employees = employee_df[
-    employee_df["Department"] == "IT"
-]
+# - chunksize
+# - low_memory
+# - nrows
+# - usecols
+# """
 
-print(it_employees)
+# print("Used For Handling Large Datasets")
 
-print("\n")
+# print("\n")
 
-print("Average Salary:\n")
 
-print(employee_df["Salary"].mean())
+# # =========================================================
+# # 33. MINI PRACTICE TASK
+# # =========================================================
 
-print("\n")
+# print("========== MINI PRACTICE TASK ==========\n")
 
+# netflix_df = pd.read_csv(
+#     "datasets/netflix_data.csv"
+# )
 
-# =========================================================
-# 30. INTERVIEW QUESTIONS
-# =========================================================
+# print(netflix_df.head())
 
-"""
-Q1. What is CSV?
+# print("\n")
 
-A file format used to store tabular data.
+# print("Only Movies:\n")
 
---------------------------------------------------
+# movies = netflix_df[
+#     netflix_df["Type"] == "Movie"
+# ]
 
-Q2. How to read CSV file?
+# print(movies)
 
-Using:
-pd.read_csv()
+# print("\n")
 
---------------------------------------------------
+# print("Top Rated Content:\n")
 
-Q3. How to read JSON file?
+# top_rated = netflix_df.sort_values(
+#     by="Rating",
+#     ascending=False
+# )
 
-Using:
-pd.read_json()
+# print(top_rated.head())
 
---------------------------------------------------
+# print("\n")
 
-Q4. How to save DataFrame as CSV?
 
-Using:
-df.to_csv()
+# # =========================================================
+# # 34. MINI PROJECT TASK
+# # =========================================================
 
---------------------------------------------------
+# print("========== MINI PROJECT TASK ==========\n")
 
-Q5. How to handle missing values?
+# sales_df = pd.read_csv(
+#     "datasets/sales_data.csv"
+# )
 
-Using:
-fillna()
-dropna()
+# print(sales_df)
 
---------------------------------------------------
+# print("\n")
 
-Q6. How to remove duplicate rows?
+# print("Total Sales:\n")
 
-Using:
-drop_duplicates()
+# sales_df["TotalAmount"] = (
+#     sales_df["Quantity"] *
+#     sales_df["Price"]
+# )
 
---------------------------------------------------
+# print(sales_df)
 
-Q7. How to read Excel files?
+# print("\n")
 
-Using:
-pd.read_excel()
+# print("Highest Sales Product:\n")
 
---------------------------------------------------
+# highest_sales = sales_df.sort_values(
+#     by="TotalAmount",
+#     ascending=False
+# )
 
-Q8. Why is CSV important in ML?
+# print(highest_sales.head(1))
 
-Because datasets are mostly stored in CSV format.
-"""
+# print("\n")
 
-# =========================================================
-# 31. END OF FILE
-# =========================================================
 
-print("========== CSV & JSON TUTORIAL COMPLETED ==========")
+# # =========================================================
+# # 35. INTERVIEW QUESTIONS
+# # =========================================================
+
+# """
+# Q1. What is CSV?
+
+# A file format used to store tabular data.
+
+# --------------------------------------------------
+
+# Q2. How to read CSV file?
+
+# Using:
+# pd.read_csv()
+
+# --------------------------------------------------
+
+# Q3. How to read JSON file?
+
+# Using:
+# pd.read_json()
+
+# --------------------------------------------------
+
+# Q4. How to export CSV?
+
+# Using:
+# df.to_csv()
+
+# --------------------------------------------------
+
+# Q5. How to export JSON?
+
+# Using:
+# df.to_json()
+
+# --------------------------------------------------
+
+# Q6. How to check dataset information?
+
+# Using:
+# df.info()
+
+# --------------------------------------------------
+
+# Q7. How to check null values?
+
+# Using:
+# df.isnull()
+
+# --------------------------------------------------
+
+# Q8. How to remove duplicate rows?
+
+# Using:
+# drop_duplicates()
+
+# --------------------------------------------------
+
+# Q9. Why is CSV important in ML?
+
+# Because most datasets are stored in CSV format.
+
+# --------------------------------------------------
+
+# Q10. What is JSON mainly used for?
+
+# - APIs
+# - Web Applications
+# - Data Exchange
+# """
+
+# # =========================================================
+# # 36. END OF FILE
+# # =========================================================
+
+# print("========== CSV & JSON TUTORIAL COMPLETED ==========")

@@ -1,0 +1,11 @@
+EmployeeID,Name,Age,Department,City,Salary,Experience
+101,Mohit,22,IT,Delhi,50000,1
+102,Aman,24,HR,Noida,45000,2
+103,Neha,23,Finance,Mumbai,60000,3
+104,Rahul,25,IT,Pune,70000,4
+105,Simran,26,Marketing,Lucknow,55000,3
+106,Ritika,27,IT,Delhi,80000,5
+107,Karan,28,Finance,Noida,75000,6
+108,Priya,24,HR,Mumbai,48000,2
+109,Arjun,29,IT,Bangalore,90000,7
+110,Sneha,30,Marketing,Pune,65000,5

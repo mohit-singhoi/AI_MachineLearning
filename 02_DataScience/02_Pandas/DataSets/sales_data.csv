@@ -1,0 +1,11 @@
+OrderID,Product,Category,Quantity,Price,City,SalesPerson
+1001,Laptop,Electronics,2,55000,Delhi,Mohit
+1002,Phone,Electronics,5,20000,Noida,Aman
+1003,Shoes,Fashion,3,3000,Mumbai,Neha
+1004,T-Shirt,Fashion,10,1200,Pune,Rahul
+1005,Tablet,Electronics,4,25000,Lucknow,Simran
+1006,Watch,Accessories,6,5000,Delhi,Ritika
+1007,Bag,Accessories,8,2500,Noida,Karan
+1008,Headphones,Electronics,7,4000,Mumbai,Priya
+1009,Jacket,Fashion,2,4500,Pune,Arjun
+1010,Camera,Electronics,1,65000,Bangalore,Sneha
