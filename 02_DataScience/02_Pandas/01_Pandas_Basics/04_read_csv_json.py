@@ -293,78 +293,86 @@ print(df.isnull().sum())
 print("\n")
 
 
-# # =========================================================
-# # 20. REMOVE DUPLICATES
-# # =========================================================
+# =========================================================
+# 20. REMOVE DUPLICATES
+# =========================================================
 
-# print("========== REMOVE DUPLICATES ==========\n")
+print("========== REMOVE DUPLICATES ==========\n")
 
-# duplicate_removed = df.drop_duplicates()
+duplicate_removed = df.drop_duplicates()
 
-# print(duplicate_removed)
+print(duplicate_removed)
 
-# print("\n")
-
-
-# # =========================================================
-# # 21. WHAT IS JSON?
-# # =========================================================
-
-# """
-# JSON = JavaScript Object Notation
-
-# - Used in APIs
-# - Stores data in key-value format
-# - Common in web applications
-# """
-
-# print("========== JSON FILES ==========\n")
+print("\n")
 
 
-# # =========================================================
-# # 22. READ JSON FILE
-# # =========================================================
+# =========================================================
+# 21. WHAT IS JSON?
+# =========================================================
 
-# print("========== READ JSON ==========\n")
+"""
+JSON = JavaScript Object Notation
 
-# json_df = pd.read_json("datasets/employees.json")
+- Used in APIs
+- Stores data in key-value format
+- Common in web applications
+"""
 
-# print(json_df)
-
-# print("\n")
-
-
-# # =========================================================
-# # 23. JSON HEAD
-# # =========================================================
-
-# print("========== JSON HEAD ==========\n")
-
-# print(json_df.head())
-
-# print("\n")
+print("========== JSON FILES ==========\n")
 
 
-# # =========================================================
-# # 24. JSON SHAPE
-# # =========================================================
-
-# print("========== JSON SHAPE ==========\n")
-
-# print(json_df.shape)
-
-# print("\n")
+# =========================================================
+# 22. READ JSON FILE
+# =========================================================
 
 
-# # =========================================================
-# # 25. JSON INFO
-# # =========================================================
 
-# print("========== JSON INFO ==========\n")
+# print("JSON FILE Path")
 
-# print(json_df.info())
+BASE_DIR = Path(__file__).resolve().parent
 
-# print("\n")
+json_path = BASE_DIR.parent / "datasets" / "employees.json"
+
+print("========== READ JSON ==========\n")
+
+json_df = pd.read_json(json_path)
+
+print(json_df)
+
+print("\n")
+
+
+# =========================================================
+# 23. JSON HEAD
+# =========================================================
+
+print("========== JSON HEAD ==========\n")
+
+print(json_df.head())
+
+print("\n")
+
+
+# =========================================================
+# 24. JSON SHAPE
+# =========================================================
+
+print("========== JSON SHAPE ==========\n")
+
+print(json_df.shape)
+
+print("\n")
+
+
+# =========================================================
+# 25. JSON INFO
+# =========================================================
+
+print("========== JSON INFO ==========\n")
+
+print(json_df.info())
+
+print("\n")
 
 
 # # =========================================================
