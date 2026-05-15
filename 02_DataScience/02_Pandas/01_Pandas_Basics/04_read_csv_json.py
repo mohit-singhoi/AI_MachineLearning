@@ -678,81 +678,81 @@ print(highest_sales.head(1))
 print("\n")
 
 
-# # =========================================================
-# # 35. INTERVIEW QUESTIONS
-# # =========================================================
+# =========================================================
+# 35. INTERVIEW QUESTIONS
+# =========================================================
 
-# """
-# Q1. What is CSV?
+"""
+Q1. What is CSV?
 
-# A file format used to store tabular data.
+A file format used to store tabular data.
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q2. How to read CSV file?
+Q2. How to read CSV file?
 
-# Using:
-# pd.read_csv()
+Using:
+pd.read_csv()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q3. How to read JSON file?
+Q3. How to read JSON file?
 
-# Using:
-# pd.read_json()
+Using:
+pd.read_json()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q4. How to export CSV?
+Q4. How to export CSV?
 
-# Using:
-# df.to_csv()
+Using:
+df.to_csv()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q5. How to export JSON?
+Q5. How to export JSON?
 
-# Using:
-# df.to_json()
+Using:
+df.to_json()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q6. How to check dataset information?
+Q6. How to check dataset information?
 
-# Using:
-# df.info()
+Using:
+df.info()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q7. How to check null values?
+Q7. How to check null values?
 
-# Using:
-# df.isnull()
+Using:
+df.isnull()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q8. How to remove duplicate rows?
+Q8. How to remove duplicate rows?
 
-# Using:
-# drop_duplicates()
+Using:
+drop_duplicates()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q9. Why is CSV important in ML?
+Q9. Why is CSV important in ML?
 
-# Because most datasets are stored in CSV format.
+Because most datasets are stored in CSV format.
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q10. What is JSON mainly used for?
+Q10. What is JSON mainly used for?
 
-# - APIs
-# - Web Applications
-# - Data Exchange
-# """
+- APIs
+- Web Applications
+- Data Exchange
+"""
 
-# # =========================================================
-# # 36. END OF FILE
-# # =========================================================
+# =========================================================
+# 36. END OF FILE
+# =========================================================
 
-# print("========== CSV & JSON TUTORIAL COMPLETED ==========")
+print("========== CSV & JSON TUTORIAL COMPLETED ==========")
