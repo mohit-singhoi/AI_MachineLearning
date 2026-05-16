@@ -262,282 +262,282 @@ print(df["Salary"].median())
 print("\n")
 
 
-# # =========================================================
-# # 24. MODE OF DEPARTMENT
-# # =========================================================
+# =========================================================
+# 24. MODE OF DEPARTMENT
+# =========================================================
 
-# print("========== MODE OF DEPARTMENT ==========\n")
+print("========== MODE OF DEPARTMENT ==========\n")
 
-# print(df["Department"].mode())
+print(df["Department"].mode())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 25. STANDARD DEVIATION
-# # =========================================================
+# =========================================================
+# 25. STANDARD DEVIATION
+# =========================================================
 
-# print("========== STANDARD DEVIATION ==========\n")
+print("========== STANDARD DEVIATION ==========\n")
 
-# print(df["Salary"].std())
+print(df["Salary"].std())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 26. SORT DATA
-# # =========================================================
+# =========================================================
+# 26. SORT DATA
+# =========================================================
 
-# print("========== SORT DATA ==========\n")
+print("========== SORT DATA ==========\n")
 
-# sorted_df = df.sort_values(
-#     by="Salary",
-#     ascending=False
-# )
+sorted_df = df.sort_values(
+    by="Salary",
+    ascending=False
+)
 
-# print(sorted_df)
+print(sorted_df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 27. FILTER HIGH SALARY EMPLOYEES
-# # =========================================================
+# =========================================================
+# 27. FILTER HIGH SALARY EMPLOYEES
+# =========================================================
 
-# print("========== HIGH SALARY EMPLOYEES ==========\n")
+print("========== HIGH SALARY EMPLOYEES ==========\n")
 
-# high_salary = df[df["Salary"] > 60000]
+high_salary = df[df["Salary"] > 60000]
 
-# print(high_salary)
+print(high_salary)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 28. SELECT SPECIFIC COLUMNS
-# # =========================================================
+# =========================================================
+# 28. SELECT SPECIFIC COLUMNS
+# =========================================================
 
-# print("========== SELECT SPECIFIC COLUMNS ==========\n")
+print("========== SELECT SPECIFIC COLUMNS ==========\n")
 
-# selected_columns = df[
-#     ["EmployeeName", "Salary"]
-# ]
+selected_columns = df[
+    ["EmployeeName", "Salary"]
+]
 
-# print(selected_columns)
+print(selected_columns)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 29. RANDOM SAMPLE
-# # =========================================================
+# =========================================================
+# 29. RANDOM SAMPLE
+# =========================================================
 
-# print("========== RANDOM SAMPLE ==========\n")
+print("========== RANDOM SAMPLE ==========\n")
 
-# print(df.sample(3))
+print(df.sample(3))
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 30. CORRELATION
-# # =========================================================
+# =========================================================
+# 30. CORRELATION
+# =========================================================
 
-# print("========== CORRELATION ==========\n")
+print("========== CORRELATION ==========\n")
 
-# numeric_df = df.select_dtypes(include="number")
+numeric_df = df.select_dtypes(include="number")
 
-# print(numeric_df.corr())
+print(numeric_df.corr())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 31. MEMORY USAGE
-# # =========================================================
+# =========================================================
+# 31. MEMORY USAGE
+# =========================================================
 
-# print("========== MEMORY USAGE ==========\n")
+print("========== MEMORY USAGE ==========\n")
 
-# print(df.memory_usage())
+print(df.memory_usage())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 32. LARGEST SALARY ROW
-# # =========================================================
+# =========================================================
+# 32. LARGEST SALARY ROW
+# =========================================================
 
-# print("========== HIGHEST SALARY EMPLOYEE ==========\n")
+print("========== HIGHEST SALARY EMPLOYEE ==========\n")
 
-# highest_salary = df.nlargest(1, "Salary")
+highest_salary = df.nlargest(1, "Salary")
 
-# print(highest_salary)
+print(highest_salary)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 33. LOWEST SALARY ROW
-# # =========================================================
+# =========================================================
+# 33. LOWEST SALARY ROW
+# =========================================================
 
-# print("========== LOWEST SALARY EMPLOYEE ==========\n")
+print("========== LOWEST SALARY EMPLOYEE ==========\n")
 
-# lowest_salary = df.nsmallest(1, "Salary")
+lowest_salary = df.nsmallest(1, "Salary")
 
-# print(lowest_salary)
+print(lowest_salary)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 34. GROUP BY DEPARTMENT
-# # =========================================================
+# =========================================================
+# 34. GROUP BY DEPARTMENT
+# =========================================================
 
-# print("========== GROUP BY DEPARTMENT ==========\n")
+print("========== GROUP BY DEPARTMENT ==========\n")
 
-# grouped = df.groupby("Department")["Salary"].mean()
+grouped = df.groupby("Department")["Salary"].mean()
 
-# print(grouped)
+print(grouped)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 35. MINI PRACTICE TASK
-# # =========================================================
+# =========================================================
+# 35. MINI PRACTICE TASK
+# =========================================================
 
-# print("========== MINI PRACTICE TASK ==========\n")
+print("========== MINI PRACTICE TASK ==========\n")
 
-# student_data = {
-#     "Student": ["Aman", "Neha", "Rahul", "Simran"],
-#     "Math": [80, 95, 70, 88],
-#     "Science": [85, 90, 75, 92],
-#     "English": [78, 91, 72, 85]
-# }
+student_data = {
+    "Student": ["Aman", "Neha", "Rahul", "Simran"],
+    "Math": [80, 95, 70, 88],
+    "Science": [85, 90, 75, 92],
+    "English": [78, 91, 72, 85]
+}
 
-# students_df = pd.DataFrame(student_data)
+students_df = pd.DataFrame(student_data)
 
-# print(students_df)
+print(students_df)
 
-# print("\nTop Math Student:\n")
+print("\nTop Math Student:\n")
 
-# top_math = students_df.nlargest(1, "Math")
+top_math = students_df.nlargest(1, "Math")
 
-# print(top_math)
+print(top_math)
 
-# print("\nAverage Science Marks:\n")
+print("\nAverage Science Marks:\n")
 
-# print(students_df["Science"].mean())
+print(students_df["Science"].mean())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 36. MINI PROJECT TASK
-# # =========================================================
+# =========================================================
+# 36. MINI PROJECT TASK
+# =========================================================
 
-# print("========== MINI PROJECT TASK ==========\n")
+print("========== MINI PROJECT TASK ==========\n")
 
-# sales_path = BASE_DIR.parent / "datasets" / "sales_data.csv"
+sales_path = BASE_DIR.parent / "datasets" / "sales_data.csv"
 
-# sales_df = pd.read_csv(sales_path)
+sales_df = pd.read_csv(sales_path)
 
-# print(sales_df.head())
+print(sales_df.head())
 
-# print("\nTotal Revenue:\n")
+print("\nTotal Revenue:\n")
 
-# sales_df["Revenue"] = (
-#     sales_df["Quantity"] *
-#     sales_df["Price"]
-# )
+sales_df["Revenue"] = (
+    sales_df["Quantity"] *
+    sales_df["Price"]
+)
 
-# print(sales_df)
+print(sales_df)
 
-# print("\nHighest Revenue Product:\n")
+print("\nHighest Revenue Product:\n")
 
-# highest_revenue = sales_df.nlargest(1, "Revenue")
+highest_revenue = sales_df.nlargest(1, "Revenue")
 
-# print(highest_revenue)
+print(highest_revenue)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 37. INTERVIEW QUESTIONS
-# # =========================================================
+# =========================================================
+# 37. INTERVIEW QUESTIONS
+# =========================================================
 
-# """
-# Q1. What is Data Exploration?
+"""
+Q1. What is Data Exploration?
 
-# Understanding and analyzing dataset structure.
+Understanding and analyzing dataset structure.
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q2. How to check dataset shape?
+Q2. How to check dataset shape?
 
-# Using:
-# df.shape
+Using:
+df.shape
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q3. How to get column names?
+Q3. How to get column names?
 
-# Using:
-# df.columns
+Using:
+df.columns
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q4. How to check data types?
+Q4. How to check data types?
 
-# Using:
-# df.dtypes
+Using:
+df.dtypes
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q5. How to check dataset information?
+Q5. How to check dataset information?
 
-# Using:
-# df.info()
+Using:
+df.info()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q6. How to check null values?
+Q6. How to check null values?
 
-# Using:
-# df.isnull()
+Using:
+df.isnull()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q7. How to count missing values?
+Q7. How to count missing values?
 
-# Using:
-# df.isnull().sum()
+Using:
+df.isnull().sum()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q8. How to check duplicate rows?
+Q8. How to check duplicate rows?
 
-# Using:
-# df.duplicated()
+Using:
+df.duplicated()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q9. How to get statistical summary?
+Q9. How to get statistical summary?
 
-# Using:
-# df.describe()
+Using:
+df.describe()
 
-# --------------------------------------------------
+--------------------------------------------------
 
-# Q10. Why is EDA important?
+Q10. Why is EDA important?
 
-# Because it helps understand data before
-# Machine Learning and Data Analysis.
-# """
+Because it helps understand data before
+Machine Learning and Data Analysis.
+"""
 
 
-# # =========================================================
-# # 38. END OF FILE
-# # =========================================================
+# =========================================================
+# 38. END OF FILE
+# =========================================================
 
-# print("========== EXPLORING DATA COMPLETED ==========")
+print("========== EXPLORING DATA COMPLETED ==========")
