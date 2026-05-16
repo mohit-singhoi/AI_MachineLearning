@@ -1,0 +1,6 @@
+OrderID,Customer,Amount,Status
+1,Mohit,5000,Delivered
+2,Aman,,Pending
+3,Neha,7000,Delivered
+3,Neha,7000,Delivered
+4,,8000,Cancelled
