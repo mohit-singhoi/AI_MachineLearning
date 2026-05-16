@@ -63,313 +63,313 @@ print(df)
 print("\n")
 
 
-# # =========================================================
-# # 4. CHECK NULL VALUES
-# # =========================================================
+# =========================================================
+# 4. CHECK NULL VALUES
+# =========================================================
 
-# print("========== CHECK NULL VALUES ==========\n")
+print("========== CHECK NULL VALUES ==========\n")
 
-# print(df.isnull())
+print(df.isnull())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 5. COUNT NULL VALUES
-# # =========================================================
+# =========================================================
+# 5. COUNT NULL VALUES
+# =========================================================
 
-# print("========== COUNT NULL VALUES ==========\n")
+print("========== COUNT NULL VALUES ==========\n")
 
-# print(df.isnull().sum())
+print(df.isnull().sum())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 6. CHECK NON-NULL VALUES
-# # =========================================================
+# =========================================================
+# 6. CHECK NON-NULL VALUES
+# =========================================================
 
-# print("========== NON-NULL VALUES ==========\n")
+print("========== NON-NULL VALUES ==========\n")
 
-# print(df.notnull())
+print(df.notnull())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 7. TOTAL MISSING VALUES
-# # =========================================================
+# =========================================================
+# 7. TOTAL MISSING VALUES
+# =========================================================
 
-# print("========== TOTAL MISSING VALUES ==========\n")
+print("========== TOTAL MISSING VALUES ==========\n")
 
-# print(df.isnull().sum().sum())
+print(df.isnull().sum().sum())
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 8. CHECK ROWS WITH NULL VALUES
-# # =========================================================
+# =========================================================
+# 8. CHECK ROWS WITH NULL VALUES
+# =========================================================
 
-# print("========== ROWS WITH NULL VALUES ==========\n")
+print("========== ROWS WITH NULL VALUES ==========\n")
 
-# null_rows = df[
-#     df.isnull().any(axis=1)
-# ]
+null_rows = df[
+    df.isnull().any(axis=1)
+]
 
-# print(null_rows)
+print(null_rows)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 9. DROP ROWS WITH NULL VALUES
-# # =========================================================
+# =========================================================
+# 9. DROP ROWS WITH NULL VALUES
+# =========================================================
 
-# print("========== DROP NULL ROWS ==========\n")
+print("========== DROP NULL ROWS ==========\n")
 
-# dropped_rows = df.dropna()
+dropped_rows = df.dropna()
 
-# print(dropped_rows)
+print(dropped_rows)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 10. DROP COLUMNS WITH NULL VALUES
-# # =========================================================
+# =========================================================
+# 10. DROP COLUMNS WITH NULL VALUES
+# =========================================================
 
-# print("========== DROP NULL COLUMNS ==========\n")
+print("========== DROP NULL COLUMNS ==========\n")
 
-# dropped_columns = df.dropna(axis=1)
+dropped_columns = df.dropna(axis=1)
 
-# print(dropped_columns)
+print(dropped_columns)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 11. FILL NULL VALUES WITH 0
-# # =========================================================
+# =========================================================
+# 11. FILL NULL VALUES WITH 0
+# =========================================================
 
-# print("========== FILL NULL WITH 0 ==========\n")
+print("========== FILL NULL WITH 0 ==========\n")
 
-# filled_zero = df.fillna(0)
+filled_zero = df.fillna(0)
 
-# print(filled_zero)
+print(filled_zero)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 12. FILL NULL VALUES WITH CUSTOM VALUE
-# # =========================================================
+# =========================================================
+# 12. FILL NULL VALUES WITH CUSTOM VALUE
+# =========================================================
 
-# print("========== CUSTOM FILL ==========\n")
+print("========== CUSTOM FILL ==========\n")
 
-# filled_custom = df.fillna(
-#     {
-#         "Name": "Unknown",
-#         "Department": "Not Assigned",
-#         "Age": 0,
-#         "Salary": 0
-#     }
-# )
+filled_custom = df.fillna(
+    {
+        "Name": "Unknown",
+        "Department": "Not Assigned",
+        "Age": 0,
+        "Salary": 0
+    }
+)
 
-# print(filled_custom)
+print(filled_custom)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 13. FILL USING MEAN
-# # =========================================================
+# =========================================================
+# 13. FILL USING MEAN
+# =========================================================
 
-# print("========== FILL USING MEAN ==========\n")
+print("========== FILL USING MEAN ==========\n")
 
-# mean_age = df["Age"].mean()
+mean_age = df["Age"].mean()
 
-# df["Age"] = df["Age"].fillna(mean_age)
+df["Age"] = df["Age"].fillna(mean_age)
 
-# print(df)
+print(df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 14. FILL USING MEDIAN
-# # =========================================================
+# =========================================================
+# 14. FILL USING MEDIAN
+# =========================================================
 
-# print("========== FILL USING MEDIAN ==========\n")
+print("========== FILL USING MEDIAN ==========\n")
 
-# median_salary = df["Salary"].median()
+median_salary = df["Salary"].median()
 
-# df["Salary"] = df["Salary"].fillna(
-#     median_salary
-# )
+df["Salary"] = df["Salary"].fillna(
+    median_salary
+)
 
-# print(df)
+print(df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 15. FILL USING MODE
-# # =========================================================
+# =========================================================
+# 15. FILL USING MODE
+# =========================================================
 
-# print("========== FILL USING MODE ==========\n")
+print("========== FILL USING MODE ==========\n")
 
-# mode_department = (
-#     df["Department"].mode()[0]
-# )
+mode_department = (
+    df["Department"].mode()[0]
+)
 
-# df["Department"] = df["Department"].fillna(
-#     mode_department
-# )
+df["Department"] = df["Department"].fillna(
+    mode_department
+)
 
-# print(df)
+print(df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 16. FORWARD FILL
-# # =========================================================
+# =========================================================
+# 16. FORWARD FILL
+# =========================================================
 
-# print("========== FORWARD FILL ==========\n")
+print("========== FORWARD FILL ==========\n")
 
-# forward_fill_df = df.ffill()
+forward_fill_df = df.ffill()
 
-# print(forward_fill_df)
+print(forward_fill_df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 17. BACKWARD FILL
-# # =========================================================
+# =========================================================
+# 17. BACKWARD FILL
+# =========================================================
 
-# print("========== BACKWARD FILL ==========\n")
+print("========== BACKWARD FILL ==========\n")
 
-# backward_fill_df = df.bfill()
+backward_fill_df = df.bfill()
 
-# print(backward_fill_df)
+print(backward_fill_df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 18. CHECK DATA TYPES
-# # =========================================================
+# =========================================================
+# 18. CHECK DATA TYPES
+# =========================================================
 
-# print("========== DATA TYPES ==========\n")
+print("========== DATA TYPES ==========\n")
 
-# print(df.dtypes)
+print(df.dtypes)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 19. REPLACE NULL VALUES
-# # =========================================================
+# =========================================================
+# 19. REPLACE NULL VALUES
+# =========================================================
 
-# print("========== REPLACE NULL VALUES ==========\n")
+print("========== REPLACE NULL VALUES ==========\n")
 
-# replace_df = pd.DataFrame({
-#     "Marks": [90, np.nan, 85, np.nan]
-# })
+replace_df = pd.DataFrame({
+    "Marks": [90, np.nan, 85, np.nan]
+})
 
-# print("ORIGINAL:\n")
+print("ORIGINAL:\n")
 
-# print(replace_df)
+print(replace_df)
 
-# print("\n")
+print("\n")
 
-# replace_df.replace(
-#     np.nan,
-#     0,
-#     inplace=True
-# )
+replace_df.replace(
+    np.nan,
+    0,
+    inplace=True
+)
 
-# print("UPDATED:\n")
+print("UPDATED:\n")
 
-# print(replace_df)
+print(replace_df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 20. PERCENTAGE OF MISSING VALUES
-# # =========================================================
+# =========================================================
+# 20. PERCENTAGE OF MISSING VALUES
+# =========================================================
 
-# print("========== MISSING VALUE PERCENTAGE ==========\n")
+print("========== MISSING VALUE PERCENTAGE ==========\n")
 
-# missing_percentage = (
-#     df.isnull().sum() / len(df)
-# ) * 100
+missing_percentage = (
+    df.isnull().sum() / len(df)
+) * 100
 
-# print(missing_percentage)
+print(missing_percentage)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 21. REMOVE ROWS WITH SPECIFIC NULLS
-# # =========================================================
+# =========================================================
+# 21. REMOVE ROWS WITH SPECIFIC NULLS
+# =========================================================
 
-# print("========== DROP SPECIFIC NULLS ==========\n")
+print("========== DROP SPECIFIC NULLS ==========\n")
 
-# specific_drop = df.dropna(
-#     subset=["Name"]
-# )
+specific_drop = df.dropna(
+    subset=["Name"]
+)
 
-# print(specific_drop)
+print(specific_drop)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 22. THRESHOLD NULL HANDLING
-# # =========================================================
+# =========================================================
+# 22. THRESHOLD NULL HANDLING : Need at least 3 valid values
+# =========================================================
 
-# print("========== THRESHOLD HANDLING ==========\n")
+print("========== THRESHOLD HANDLING ==========\n")
 
-# threshold_df = df.dropna(
-#     thresh=3
-# )
+threshold_df = df.dropna(
+    thresh=3
+)
 
-# print(threshold_df)
+print(threshold_df)
 
-# print("\n")
+print("\n")
 
 
-# # =========================================================
-# # 23. INTERPOLATION
-# # =========================================================
+# =========================================================
+# 23. INTERPOLATION
+# =========================================================
 
-# print("========== INTERPOLATION ==========\n")
+print("========== INTERPOLATION ==========\n")
 
-# data2 = {
-#     "Sales": [1000, np.nan, 3000, np.nan, 5000]
-# }
+data2 = {
+    "Sales": [1000, np.nan, 3000, np.nan, 5000]
+}
 
-# sales_df = pd.DataFrame(data2)
+sales_df = pd.DataFrame(data2)
 
-# print("ORIGINAL DATA:\n")
+print("ORIGINAL DATA:\n")
 
-# print(sales_df)
+print(sales_df)
 
-# print("\n")
+print("\n")
 
-# sales_df["Sales"] = (
-#     sales_df["Sales"].interpolate()
-# )
+sales_df["Sales"] = (
+    sales_df["Sales"].interpolate()
+)
 
-# print("INTERPOLATED DATA:\n")
+print("INTERPOLATED DATA:\n")
 
-# print(sales_df)
+print(sales_df)
 
-# print("\n")
+print("\n")
 
 
 # # =========================================================
