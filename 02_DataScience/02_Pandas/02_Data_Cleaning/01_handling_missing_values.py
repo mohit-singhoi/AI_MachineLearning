@@ -424,105 +424,105 @@ print(students_df)
 print("\n")
 
 
-# # =========================================================
-# # 25. REAL-WORLD INDUSTRY LEARNING
-# # =========================================================
+# =========================================================
+# 25. REAL-WORLD INDUSTRY LEARNING
+# =========================================================
 
-# print("========== INDUSTRY LEARNING ==========\n")
+print("========== INDUSTRY LEARNING ==========\n")
 
-# """
-# Handling Missing Values is one of the
-# most important tasks in Data Cleaning.
+"""
+Handling Missing Values is one of the
+most important tasks in Data Cleaning.
 
-# In real-world projects:
-# - Datasets are rarely clean
-# - Missing data is extremely common
+In real-world projects:
+- Datasets are rarely clean
+- Missing data is extremely common
 
-# Common techniques:
-# - Drop rows
-# - Fill with mean
-# - Fill with median
-# - Fill with mode
-# - Interpolation
+Common techniques:
+- Drop rows
+- Fill with mean
+- Fill with median
+- Fill with mode
+- Interpolation
 
-# Used heavily in:
-# - Machine Learning
-# - Data Science
-# - AI Projects
-# """
+Used heavily in:
+- Machine Learning
+- Data Science
+- AI Projects
+"""
 
-# print("Missing Value Handling Is Industry Critical")
+print("Missing Value Handling Is Industry Critical")
 
-# print("\n")
-
-
-# # =========================================================
-# # 26. INTERVIEW QUESTIONS
-# # =========================================================
-
-# """
-# Q1. What are missing values?
-
-# Ans:
-# Values that are empty or unavailable.
-
-# --------------------------------------------------
-
-# Q2. How to check missing values?
-
-# Using:
-# isnull()
-
-# --------------------------------------------------
-
-# Q3. How to count null values?
-
-# Using:
-# isnull().sum()
-
-# --------------------------------------------------
-
-# Q4. How to remove null values?
-
-# Using:
-# dropna()
-
-# --------------------------------------------------
-
-# Q5. How to fill null values?
-
-# Using:
-# fillna()
-
-# --------------------------------------------------
-
-# Q6. Difference between mean and median filling?
-
-# Mean:
-# Average value
-
-# Median:
-# Middle value
-
-# --------------------------------------------------
-
-# Q7. What is forward fill?
-
-# Ans:
-# Copies previous value into null value.
-
-# --------------------------------------------------
-
-# Q8. Why is missing value handling important?
-
-# Ans:
-# Because ML models cannot properly
-# work with missing data.
-# """
+print("\n")
 
 
-# # =========================================================
-# # 27. END OF FILE
-# # =========================================================
+# =========================================================
+# 26. INTERVIEW QUESTIONS
+# =========================================================
 
-# print("========== MISSING VALUE HANDLING COMPLETED ==========")
+"""
+Q1. What are missing values?
+
+Ans:
+Values that are empty or unavailable.
+
+--------------------------------------------------
+
+Q2. How to check missing values?
+
+Using:
+isnull()
+
+--------------------------------------------------
+
+Q3. How to count null values?
+
+Using:
+isnull().sum()
+
+--------------------------------------------------
+
+Q4. How to remove null values?
+
+Using:
+dropna()
+
+--------------------------------------------------
+
+Q5. How to fill null values?
+
+Using:
+fillna()
+
+--------------------------------------------------
+
+Q6. Difference between mean and median filling?
+
+Mean:
+Average value
+
+Median:
+Middle value
+
+--------------------------------------------------
+
+Q7. What is forward fill?
+
+Ans:
+Copies previous value into null value.
+
+--------------------------------------------------
+
+Q8. Why is missing value handling important?
+
+Ans:
+Because ML models cannot properly
+work with missing data.
+"""
+
+
+# =========================================================
+# 27. END OF FILE
+# =========================================================
+
+print("========== MISSING VALUE HANDLING COMPLETED ==========")
