@@ -372,56 +372,56 @@ print(sales_df)
 print("\n")
 
 
-# # =========================================================
-# # 24. MINI PRACTICE TASK
-# # =========================================================
+# =========================================================
+# 24. MINI PRACTICE TASK
+# =========================================================
 
-# print("========== MINI PRACTICE TASK ==========\n")
+print("========== MINI PRACTICE TASK ==========\n")
 
-# student_data = {
-#     "Student": ["Aman", "Neha", None, "Simran"],
-#     "Math": [80, np.nan, 70, 88],
-#     "Science": [85, 90, np.nan, 92]
-# }
+student_data = {
+    "Student": ["Aman", "Neha", None, "Simran"],
+    "Math": [80, np.nan, 70, 88],
+    "Science": [85, 90, np.nan, 92]
+}
 
-# students_df = pd.DataFrame(student_data)
+students_df = pd.DataFrame(student_data)
 
-# print("ORIGINAL DATA:\n")
+print("ORIGINAL DATA:\n")
 
-# print(students_df)
+print(students_df)
 
-# print("\n")
+print("\n")
 
-# print("NULL VALUE COUNT:\n")
+print("NULL VALUE COUNT:\n")
 
-# print(students_df.isnull().sum())
+print(students_df.isnull().sum())
 
-# print("\n")
+print("\n")
 
-# # FILL NULL VALUES
-# students_df["Math"] = (
-#     students_df["Math"].fillna(
-#         students_df["Math"].mean()
-#     )
-# )
+# FILL NULL VALUES
+students_df["Math"] = (
+    students_df["Math"].fillna(
+        students_df["Math"].mean()
+    )
+)
 
-# students_df["Science"] = (
-#     students_df["Science"].fillna(
-#         students_df["Science"].mean()
-#     )
-# )
+students_df["Science"] = (
+    students_df["Science"].fillna(
+        students_df["Science"].mean()
+    )
+)
 
-# students_df["Student"] = (
-#     students_df["Student"].fillna(
-#         "Unknown"
-#     )
-# )
+students_df["Student"] = (
+    students_df["Student"].fillna(
+        "Unknown"
+    )
+)
 
-# print("UPDATED DATA:\n")
+print("UPDATED DATA:\n")
 
-# print(students_df)
+print(students_df)
 
-# print("\n")
+print("\n")
 
 
 # # =========================================================
