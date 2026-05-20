@@ -65,465 +65,465 @@ print(df.columns)
 print("\n")
 
 
-# =========================================================
-# 5. SELECT SINGLE COLUMN
-# =========================================================
+# # =========================================================
+# # 5. SELECT SINGLE COLUMN
+# # =========================================================
 
-print("========== SINGLE COLUMN ==========\n")
+# print("========== SINGLE COLUMN ==========\n")
 
-print(df["Name"])
+# print(df["Name"])
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 6. SELECT MULTIPLE COLUMNS
-# =========================================================
+# # =========================================================
+# # 6. SELECT MULTIPLE COLUMNS
+# # =========================================================
 
-print("========== MULTIPLE COLUMNS ==========\n")
+# print("========== MULTIPLE COLUMNS ==========\n")
 
-print(df[["Name", "Salary"]])
+# print(df[["Name", "Salary"]])
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 7. ADD NEW COLUMN
-# =========================================================
+# # =========================================================
+# # 7. ADD NEW COLUMN
+# # =========================================================
 
-print("========== ADD NEW COLUMN ==========\n")
+# print("========== ADD NEW COLUMN ==========\n")
 
-df["Bonus"] = [5000, 6500, 5500, 7000]
+# df["Bonus"] = [5000, 6500, 5500, 7000]
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 8. CREATE COLUMN USING CALCULATION
-# =========================================================
+# # =========================================================
+# # 8. CREATE COLUMN USING CALCULATION
+# # =========================================================
 
-print("========== CALCULATED COLUMN ==========\n")
+# print("========== CALCULATED COLUMN ==========\n")
 
-df["TotalSalary"] = (
-    df["Salary"] +
-    df["Bonus"]
-)
+# df["TotalSalary"] = (
+#     df["Salary"] +
+#     df["Bonus"]
+# )
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 9. UPDATE EXISTING COLUMN
-# =========================================================
+# # =========================================================
+# # 9. UPDATE EXISTING COLUMN
+# # =========================================================
 
-print("========== UPDATE COLUMN ==========\n")
+# print("========== UPDATE COLUMN ==========\n")
 
-df["Age"] = df["Age"] + 1
+# df["Age"] = df["Age"] + 1
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 10. UPDATE COLUMN USING CONDITION
-# =========================================================
+# # =========================================================
+# # 10. UPDATE COLUMN USING CONDITION
+# # =========================================================
 
-print("========== CONDITIONAL UPDATE ==========\n")
+# print("========== CONDITIONAL UPDATE ==========\n")
 
-df.loc[
-    df["Department"] == "IT",
-    "Bonus"
-] = 10000
+# df.loc[
+#     df["Department"] == "IT",
+#     "Bonus"
+# ] = 10000
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 11. RENAME SINGLE COLUMN
-# =========================================================
+# # =========================================================
+# # 11. RENAME SINGLE COLUMN
+# # =========================================================
 
-print("========== RENAME SINGLE COLUMN ==========\n")
+# print("========== RENAME SINGLE COLUMN ==========\n")
 
-df.rename(
-    columns={"Salary": "MonthlySalary"},
-    inplace=True
-)
+# df.rename(
+#     columns={"Salary": "MonthlySalary"},
+#     inplace=True
+# )
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 12. RENAME MULTIPLE COLUMNS
-# =========================================================
+# # =========================================================
+# # 12. RENAME MULTIPLE COLUMNS
+# # =========================================================
 
-print("========== RENAME MULTIPLE COLUMNS ==========\n")
+# print("========== RENAME MULTIPLE COLUMNS ==========\n")
 
-df.rename(
-    columns={
-        "Name": "EmployeeName",
-        "Age": "EmployeeAge"
-    },
-    inplace=True
-)
+# df.rename(
+#     columns={
+#         "Name": "EmployeeName",
+#         "Age": "EmployeeAge"
+#     },
+#     inplace=True
+# )
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 13. CHANGE COLUMN ORDER
-# =========================================================
+# # =========================================================
+# # 13. CHANGE COLUMN ORDER
+# # =========================================================
 
-print("========== CHANGE COLUMN ORDER ==========\n")
+# print("========== CHANGE COLUMN ORDER ==========\n")
 
-df = df[
-    [
-        "EmployeeName",
-        "Department",
-        "MonthlySalary",
-        "Bonus",
-        "TotalSalary",
-        "EmployeeAge"
-    ]
-]
+# df = df[
+#     [
+#         "EmployeeName",
+#         "Department",
+#         "MonthlySalary",
+#         "Bonus",
+#         "TotalSalary",
+#         "EmployeeAge"
+#     ]
+# ]
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 14. DELETE SINGLE COLUMN
-# =========================================================
+# # =========================================================
+# # 14. DELETE SINGLE COLUMN
+# # =========================================================
 
-print("========== DELETE SINGLE COLUMN ==========\n")
+# print("========== DELETE SINGLE COLUMN ==========\n")
 
-temp_df = df.drop(
-    "Bonus",
-    axis=1
-)
+# temp_df = df.drop(
+#     "Bonus",
+#     axis=1
+# )
 
-print(temp_df)
+# print(temp_df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 15. DELETE MULTIPLE COLUMNS
-# =========================================================
+# # =========================================================
+# # 15. DELETE MULTIPLE COLUMNS
+# # =========================================================
 
-print("========== DELETE MULTIPLE COLUMNS ==========\n")
+# print("========== DELETE MULTIPLE COLUMNS ==========\n")
 
-temp_df2 = df.drop(
-    ["Bonus", "TotalSalary"],
-    axis=1
-)
+# temp_df2 = df.drop(
+#     ["Bonus", "TotalSalary"],
+#     axis=1
+# )
 
-print(temp_df2)
+# print(temp_df2)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 16. CHECK COLUMN DATA TYPES
-# =========================================================
+# # =========================================================
+# # 16. CHECK COLUMN DATA TYPES
+# # =========================================================
 
-print("========== COLUMN DATA TYPES ==========\n")
+# print("========== COLUMN DATA TYPES ==========\n")
 
-print(df.dtypes)
+# print(df.dtypes)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 17. CONVERT COLUMN DATA TYPE
-# =========================================================
+# # =========================================================
+# # 17. CONVERT COLUMN DATA TYPE
+# # =========================================================
 
-print("========== CONVERT DATA TYPE ==========\n")
+# print("========== CONVERT DATA TYPE ==========\n")
 
-df["EmployeeAge"] = df["EmployeeAge"].astype(float)
+# df["EmployeeAge"] = df["EmployeeAge"].astype(float)
 
-print(df.dtypes)
+# print(df.dtypes)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 18. CREATE COLUMN USING apply()
-# =========================================================
+# # =========================================================
+# # 18. CREATE COLUMN USING apply()
+# # =========================================================
 
-print("========== APPLY FUNCTION ==========\n")
+# print("========== APPLY FUNCTION ==========\n")
 
-df["Tax"] = df["MonthlySalary"].apply(
-    lambda x: x * 0.10
-)
+# df["Tax"] = df["MonthlySalary"].apply(
+#     lambda x: x * 0.10
+# )
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 19. CREATE CATEGORY COLUMN
-# =========================================================
+# # =========================================================
+# # 19. CREATE CATEGORY COLUMN
+# # =========================================================
 
-print("========== CATEGORY COLUMN ==========\n")
+# print("========== CATEGORY COLUMN ==========\n")
 
-df["SalaryCategory"] = df["MonthlySalary"].apply(
-    lambda x: "High" if x > 60000 else "Low"
-)
+# df["SalaryCategory"] = df["MonthlySalary"].apply(
+#     lambda x: "High" if x > 60000 else "Low"
+# )
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 20. INSERT COLUMN AT SPECIFIC POSITION
-# =========================================================
+# # =========================================================
+# # 20. INSERT COLUMN AT SPECIFIC POSITION
+# # =========================================================
 
-print("========== INSERT COLUMN ==========\n")
+# print("========== INSERT COLUMN ==========\n")
 
-df.insert(
-    1,
-    "City",
-    ["Delhi", "Noida", "Mumbai", "Pune"]
-)
+# df.insert(
+#     1,
+#     "City",
+#     ["Delhi", "Noida", "Mumbai", "Pune"]
+# )
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 21. CHECK UNIQUE VALUES
-# =========================================================
+# # =========================================================
+# # 21. CHECK UNIQUE VALUES
+# # =========================================================
 
-print("========== UNIQUE VALUES ==========\n")
+# print("========== UNIQUE VALUES ==========\n")
 
-print(df["Department"].unique())
+# print(df["Department"].unique())
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 22. VALUE COUNTS
-# =========================================================
+# # =========================================================
+# # 22. VALUE COUNTS
+# # =========================================================
 
-print("========== VALUE COUNTS ==========\n")
+# print("========== VALUE COUNTS ==========\n")
 
-print(df["Department"].value_counts())
+# print(df["Department"].value_counts())
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 23. FILTER SPECIFIC COLUMNS
-# =========================================================
+# # =========================================================
+# # 23. FILTER SPECIFIC COLUMNS
+# # =========================================================
 
-print("========== FILTER COLUMNS ==========\n")
+# print("========== FILTER COLUMNS ==========\n")
 
-filtered_columns = df.filter(
-    items=["EmployeeName", "MonthlySalary"]
-)
+# filtered_columns = df.filter(
+#     items=["EmployeeName", "MonthlySalary"]
+# )
 
-print(filtered_columns)
+# print(filtered_columns)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 24. COLUMN STATISTICS
-# =========================================================
+# # =========================================================
+# # 24. COLUMN STATISTICS
+# # =========================================================
 
-print("========== COLUMN STATISTICS ==========\n")
+# print("========== COLUMN STATISTICS ==========\n")
 
-print("Maximum Salary:")
+# print("Maximum Salary:")
 
-print(df["MonthlySalary"].max())
+# print(df["MonthlySalary"].max())
 
-print("\nMinimum Salary:")
+# print("\nMinimum Salary:")
 
-print(df["MonthlySalary"].min())
+# print(df["MonthlySalary"].min())
 
-print("\nAverage Salary:")
+# print("\nAverage Salary:")
 
-print(df["MonthlySalary"].mean())
+# print(df["MonthlySalary"].mean())
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 25. STRING COLUMN OPERATIONS
-# =========================================================
+# # =========================================================
+# # 25. STRING COLUMN OPERATIONS
+# # =========================================================
 
-print("========== STRING OPERATIONS ==========\n")
+# print("========== STRING OPERATIONS ==========\n")
 
-df["EmployeeName"] = (
-    df["EmployeeName"].str.upper()
-)
+# df["EmployeeName"] = (
+#     df["EmployeeName"].str.upper()
+# )
 
-print(df)
+# print(df)
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 26. CHECK NULL VALUES
-# =========================================================
+# # =========================================================
+# # 26. CHECK NULL VALUES
+# # =========================================================
 
-print("========== NULL VALUES ==========\n")
+# print("========== NULL VALUES ==========\n")
 
-print(df.isnull().sum())
+# print(df.isnull().sum())
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 27. MINI PRACTICE TASK
-# =========================================================
+# # =========================================================
+# # 27. MINI PRACTICE TASK
+# # =========================================================
 
-print("========== MINI PRACTICE TASK ==========\n")
+# print("========== MINI PRACTICE TASK ==========\n")
 
-student_data = {
-    "Student": ["Aman", "Neha", "Rahul"],
-    "Math": [90, 85, 70],
-    "Science": [88, 91, 75]
-}
+# student_data = {
+#     "Student": ["Aman", "Neha", "Rahul"],
+#     "Math": [90, 85, 70],
+#     "Science": [88, 91, 75]
+# }
 
-students_df = pd.DataFrame(student_data)
+# students_df = pd.DataFrame(student_data)
 
-print("ORIGINAL DATA:\n")
+# print("ORIGINAL DATA:\n")
 
-print(students_df)
+# print(students_df)
 
-print("\n")
+# print("\n")
 
-# ADD TOTAL COLUMN
-students_df["Total"] = (
-    students_df["Math"] +
-    students_df["Science"]
-)
+# # ADD TOTAL COLUMN
+# students_df["Total"] = (
+#     students_df["Math"] +
+#     students_df["Science"]
+# )
 
-# ADD AVERAGE COLUMN
-students_df["Average"] = (
-    students_df["Total"] / 2
-)
+# # ADD AVERAGE COLUMN
+# students_df["Average"] = (
+#     students_df["Total"] / 2
+# )
 
-print("UPDATED DATA:\n")
+# print("UPDATED DATA:\n")
 
-print(students_df)
+# print(students_df)
 
-print("\n")
+# print("\n")
 
-print("TOP STUDENT:\n")
+# print("TOP STUDENT:\n")
 
-top_student = students_df.sort_values(
-    by="Total",
-    ascending=False
-)
+# top_student = students_df.sort_values(
+#     by="Total",
+#     ascending=False
+# )
 
-print(top_student.head(1))
+# print(top_student.head(1))
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 28. REAL-WORLD INDUSTRY LEARNING
-# =========================================================
+# # =========================================================
+# # 28. REAL-WORLD INDUSTRY LEARNING
+# # =========================================================
 
-print("========== INDUSTRY LEARNING ==========\n")
+# print("========== INDUSTRY LEARNING ==========\n")
 
-"""
-Column operations are heavily used in:
+# """
+# Column operations are heavily used in:
 
-- Data Cleaning
-- Feature Engineering
-- Machine Learning
-- Dashboard Creation
+# - Data Cleaning
+# - Feature Engineering
+# - Machine Learning
+# - Dashboard Creation
 
-Examples:
-- Create profit column
-- Create tax column
-- Create age groups
-- Create salary categories
+# Examples:
+# - Create profit column
+# - Create tax column
+# - Create age groups
+# - Create salary categories
 
-This process is called:
-Feature Engineering
-"""
+# This process is called:
+# Feature Engineering
+# """
 
-print("Column Operations Are Very Important")
+# print("Column Operations Are Very Important")
 
-print("\n")
+# print("\n")
 
 
-# =========================================================
-# 29. INTERVIEW QUESTIONS
-# =========================================================
+# # =========================================================
+# # 29. INTERVIEW QUESTIONS
+# # =========================================================
 
-"""
-Q1. How to add a new column?
+# """
+# Q1. How to add a new column?
 
-Using:
-df["new_column"] = values
+# Using:
+# df["new_column"] = values
 
---------------------------------------------------
+# --------------------------------------------------
 
-Q2. How to rename columns?
+# Q2. How to rename columns?
 
-Using:
-df.rename()
+# Using:
+# df.rename()
 
---------------------------------------------------
+# --------------------------------------------------
 
-Q3. How to delete columns?
+# Q3. How to delete columns?
 
-Using:
-df.drop()
+# Using:
+# df.drop()
 
---------------------------------------------------
+# --------------------------------------------------
 
-Q4. How to change data type?
+# Q4. How to change data type?
 
-Using:
-astype()
+# Using:
+# astype()
 
---------------------------------------------------
+# --------------------------------------------------
 
-Q5. How to create calculated columns?
+# Q5. How to create calculated columns?
 
-Using:
-mathematical operations
+# Using:
+# mathematical operations
 
---------------------------------------------------
+# --------------------------------------------------
 
-Q6. What is Feature Engineering?
+# Q6. What is Feature Engineering?
 
-Ans:
-Creating new useful columns/features
-from existing data.
+# Ans:
+# Creating new useful columns/features
+# from existing data.
 
---------------------------------------------------
+# --------------------------------------------------
 
-Q7. How to apply functions on columns?
+# Q7. How to apply functions on columns?
 
-Using:
-apply()
-"""
+# Using:
+# apply()
+# """
 
 
-# =========================================================
-# 30. END OF FILE
-# =========================================================
+# # =========================================================
+# # 30. END OF FILE
+# # =========================================================
 
-print("========== COLUMN OPERATIONS COMPLETED ==========")
+# print("========== COLUMN OPERATIONS COMPLETED ==========")
